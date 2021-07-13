@@ -132,9 +132,37 @@ hr{
 
 }
 .course-duration{
-    ma
     color: #FF4A60;
     background-color: #FFE4E8;
     padding: 2px 6px;
     border-radius: 25px;
+}
+
+/* Rosponsive area */
+
+@media only screen and (max-width: 688px){
+    .container{
+        width: 100%;
+    }
+    .player-container, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .player{
+        flex-direction: column;
+    }
+    .blog{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media only screen and (min-width: 688px) and (max-width: 992px){
+    .container{
+        width: 100%;
+    }
+
+    .player-container,.courses{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
